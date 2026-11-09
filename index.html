@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday, Krizel bebeee 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating hearts / balloons / sparkles are injected here by script.js -->
+  <div id="floaters" aria-hidden="true"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <!-- 1. LANDING -->
+  <header id="landing" class="screen">
+    <h1 class="title">Happy Birthday,<br><span id="herName">Krizel Anne</span></h1>
+    <p class="subtitle">November 10 — A little website made just for you</p>
+    <button class="btn" id="openBtn">Open Your Surprise 💗</button>
+  </header>
+
+  <main id="experience" hidden>
+
+    <!-- 2. COUNTDOWN -->
+    <section id="countdown" class="screen">
+      <h2>Counting down to your day</h2>
+      <div id="timer" class="timer" role="timer" aria-live="off">
+        <div class="tbox"><b id="d">0</b><span>days</span></div>
+        <div class="tbox"><b id="h">0</b><span>hours</span></div>
+        <div class="tbox"><b id="m">0</b><span>minutes</span></div>
+        <div class="tbox"><b id="s">0</b><span>seconds</span></div>
+      </div>
+      <p id="special" class="special" hidden>It’s Your Special Day! 🎉</p>
+    </section>
+
+    <!-- 3. LOVE LETTER -->
+    <section id="letter" class="screen">
+      <h2>A letter for you</h2>
+      <button class="btn" id="letterBtn" aria-expanded="false" aria-controls="letterCard">Read My Letter</button>
+      <article id="letterCard" class="card letter">
+        <p>Dear my babyy,</p>
+        <p>HAPPY HAPPY BIRTHDAAAY TO YOU, hindi kana teenager ah tanda mo na talaga niyan.
+          i know na di ako marunong sa mga DIY handmade but using my knowledge about sa mga website
+          so ito na ginawa ko. I'm so happy because birthday mo today and i hope na maging happy and 
+          mag enjoy ka sa birthday mo today. I'm so proud of you sa mga naabot mo na achievements this year
+          and i know na marami ka pang gustong makuha and mga pangarap, here lang ako always naka support every decision mo. Super Duper
+          Love na love kita everyday, every morning, every afternoon, and every night, oh diba kumpleto syempre ikaw na yan eh.
+          Super na appreciate ko every effort and actions na ginagawa mo sakin. Wish ko sa birthday mo ngayon ay maging happy and mag enjoy ka.
+          Sa susunod pang birthday mo ay magkasama pa tayo mag celebrate ng birthday mo, new year and marami pa. Wala na kong masabi kasi alam 
+          mo na lahat yun. Iloveyouu so much! mwaaaaa</p>
+        <p class="sign"><br>-Reynreyn</p>
+      </article>
+    </section>
+
+    <!-- 4. PHOTO MEMORIES -->
+    <section id="photos" class="screen">
+      <h2>Our little memories</h2>
+      <!-- Gallery items are built from the PHOTOS list in script.js -->
+      <div id="gallery" class="gallery"></div>
+    </section>
+
+    <!-- 5. REASONS -->
+    <section id="reasons" class="screen">
+      <h2>Reasons I love you</h2>
+      <p class="hint">Tap a card</p>
+      <div id="reasonGrid" class="reasons"></div>
+    </section>
+
+    <!-- 6. CAKE -->
+    <section id="cake" class="screen">
+      <h2>Make a wish</h2>
+      <div class="cake" aria-hidden="true">
+        <div class="candles">
+          <div class="candle"><i class="flame"></i></div>
+          <div class="candle"><i class="flame"></i></div>
+          <div class="candle"><i class="flame"></i></div>
+        </div>
+        <div class="tier t2"></div>
+        <div class="tier t1"></div>
+        <div class="plate"></div>
+      </div>
+      <button class="btn" id="wishBtn">Make a Wish 🕯️</button>
+      <p id="wishMsg" class="wish" hidden>May all your wishes come true. LET'S GO!</p>
+    </section>
+
+    <!-- 7. FINAL SURPRISE -->
+    <section id="final" class="screen final">
+      <!-- ✏️ CHANGE HER NAME here -->
+      <h2 class="big">Happy Birthday bebeeee!<br>I love you.</h2>
+      <button class="btn" id="moreBtn">One More Surprise</button>
+      <!-- ✏️ EDIT YOUR FINAL NOTE -->
+      <div id="finalNote" class="card note" hidden>
+        <p>Thankyouuu so much bebe dahil always kang andito for me and always kang naka support sakin lalo na sa mga decision ko.
+          Ikaw lagi yung andyan for me kaya super thankful ako sayo and na appreciate ko always mga efforts and gifts mo. Thankyou rin 
+          dahil always mokong iniintindi. Basta super thankful ako sayo and super happy ako sayo. Iloveyouuu so much! mwuaah💗</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button id="lbClose" class="lb-close" aria-label="Close photo">✕</button>
+    <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
